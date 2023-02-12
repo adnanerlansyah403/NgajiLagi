@@ -7,7 +7,7 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Detail Mengaji"
+        Title="Konsultasi"
         ContentTemplate="{DataTemplate local:Views.Mengaji.DetailPage}"
         Route="MainPage" />
 

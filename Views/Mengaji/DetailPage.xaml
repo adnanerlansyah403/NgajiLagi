@@ -7,15 +7,7 @@
         <VerticalStackLayout>
 
                 <HorizontalStackLayout Margin="0,28,0,28" 
-                        Spacing="24"
-                        VerticalOptions="Center" >
-
-                    <ImageButton Source="arrowleft.png"
-                        Margin="0,-15,0,0"
-                        Padding="14"
-                        Aspect="Center"
-                        CornerRadius="12"
-                        BackgroundColor="#F2F2F2" />
+                        Spacing="24" VerticalOptions="Center">
 
                     <Label Text="Detail Mengaji" 
                             FontSize="28"
@@ -26,16 +18,14 @@
 
                 </HorizontalStackLayout>
 
-                <StackLayout Padding="0,0,0,28" Margin="0,0,0,28">
-                    <FlexLayout AlignContent="Center" AlignItems="Center">
-                        <Image Source="user.png" WidthRequest="70" HeightRequest="70" />
+                <HorizontalStackLayout VerticalOptions="Center" Padding="0,0,0,28">
+                    <Image Source="user.png" WidthRequest="70" HeightRequest="70" />
 
-                        <VerticalStackLayout Spacing="4" Margin="12,0,0,0">
-                            <Label Text="Ustadz Fulan Fulana" Margin="0" Padding="0" FontAttributes="Bold" FontFamily="NunitoBold" FontSize="18" />
-                            <Label Text="Ustadz Fulan Fulana" Margin="0" Padding="0" FontFamily="NunitoRegular" TextColor="#88984A" FontSize="18" />
-                        </VerticalStackLayout>
-                    </FlexLayout>
-                </StackLayout>
+                    <VerticalStackLayout Spacing="4" Margin="12,5,0,0">
+                        <Label Text="Ustadz Fulan Fulana" Margin="0" Padding="0" FontAttributes="Bold" FontFamily="NunitoBold" FontSize="18" />
+                        <Label Text="Official Ngajilagi" Margin="0" Padding="0" FontFamily="NunitoRegular" TextColor="#88984A" FontSize="18" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
 
                 <Frame BorderColor="#F2F2F2" CornerRadius="20">
                     <Label Text="Mulai dari Awal" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="16" />

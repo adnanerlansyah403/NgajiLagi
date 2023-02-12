@@ -22,7 +22,6 @@ bitmap;obj/Debug/net7.0-android/resizetizer/sp/drawable/maui_splash_image.xml
 cache-path;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/155/jl/res/xml/microsoft_maui_essentials_fileprovider_file_paths.xml
 color;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/values/colors.xml
 color;obj/Debug/net7.0-android/res/values/colors.xml
-color;obj/Debug/net7.0-android/resizetizer/sp/values/maui_colors.xml
 com.google.android.material.appbar.AppBarLayout;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/151/jl/res/layout/flyoutcontent.xml
 com.google.android.material.appbar.AppBarLayout;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/151/jl/res/layout/shellcontent.xml
 com.google.android.material.appbar.AppBarLayout;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/layout/navigationlayout.xml
