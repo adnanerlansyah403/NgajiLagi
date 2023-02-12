@@ -2,6 +2,8 @@
 @string/appbar_scrolling_view_behavior;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/layout/navigationlayout.xml
 adaptive-icon;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml
 adaptive-icon;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon.xml
+adaptive-icon;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/logongajilagi_round.xml
+adaptive-icon;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/logongajilagi.xml
 alpha;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/151/jl/res/anim/enterfromleft.xml
 alpha;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/151/jl/res/anim/exittoleft.xml
 alpha;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/anim/nav_default_enter_anim.xml
@@ -17,11 +19,14 @@ attr;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/
 attr;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/values/attr.xml
 background;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml
 background;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon.xml
+background;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/logongajilagi_round.xml
+background;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/logongajilagi.xml
 bitmap;obj/Debug/net7.0-android/resizetizer/sp/drawable-v31/maui_splash_image.xml
 bitmap;obj/Debug/net7.0-android/resizetizer/sp/drawable/maui_splash_image.xml
 cache-path;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/155/jl/res/xml/microsoft_maui_essentials_fileprovider_file_paths.xml
 color;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/values/colors.xml
 color;obj/Debug/net7.0-android/res/values/colors.xml
+color;obj/Debug/net7.0-android/resizetizer/sp/values/maui_colors.xml
 com.google.android.material.appbar.AppBarLayout;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/151/jl/res/layout/flyoutcontent.xml
 com.google.android.material.appbar.AppBarLayout;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/151/jl/res/layout/shellcontent.xml
 com.google.android.material.appbar.AppBarLayout;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/layout/navigationlayout.xml
@@ -33,6 +38,8 @@ external-cache-path;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/
 external-path;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/155/jl/res/xml/microsoft_maui_essentials_fileprovider_file_paths.xml
 foreground;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml
 foreground;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon.xml
+foreground;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/logongajilagi_round.xml
+foreground;obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/logongajilagi.xml
 item;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/152/jl/res/values/styles.xml
 item;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/drawable/maui_splash.xml
 item;/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/lp/154/jl/res/values/styles.xml

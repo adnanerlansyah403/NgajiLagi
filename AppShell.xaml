@@ -7,8 +7,8 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Konsultasi"
-        ContentTemplate="{DataTemplate local:Views.Mengaji.DetailPage}"
+        Title="Sesi Mengaji"
+        ContentTemplate="{DataTemplate local:Views.Mengaji.SesiMengajiPage}"
         Route="MainPage" />
 
 </Shell>
