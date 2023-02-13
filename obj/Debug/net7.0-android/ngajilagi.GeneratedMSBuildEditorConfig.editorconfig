@@ -56,6 +56,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ngajilagi.Views.Mengaji.Ko
 build_metadata.AdditionalFiles.TargetPath = Views/Mengaji/KonsultasiPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/Mengaji/KonsultasiPage.xaml
 
+[/home/istiqomah/Documents/projects/maui/ngajilagi/Views/Mengaji/LoadingBacaanPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ngajilagi.Views.Mengaji.LoadingBacaanPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Mengaji/LoadingBacaanPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Mengaji/LoadingBacaanPage.xaml
+
 [/home/istiqomah/Documents/projects/maui/ngajilagi/Views/Mengaji/SesiMengajiPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ngajilagi.Views.Mengaji.SesiMengajiPage.xaml

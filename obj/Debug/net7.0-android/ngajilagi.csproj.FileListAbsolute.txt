@@ -1053,3 +1053,8 @@
 /home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/homeindicator.png
 /home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/homeindicator.png
 /home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/homeindicator.png
+/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/loadingbacaan.png
+/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/loadingbacaan.png
+/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/loadingbacaan.png
+/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/loadingbacaan.png
+/home/istiqomah/Documents/projects/maui/ngajilagi/obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/loadingbacaan.png
