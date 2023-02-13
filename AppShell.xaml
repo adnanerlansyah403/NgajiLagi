@@ -8,7 +8,7 @@
 
     <ShellContent
         Title="Sesi Mengaji"
-        ContentTemplate="{DataTemplate local:Views.Mengaji.LoadingBacaanPage}"
+        ContentTemplate="{DataTemplate local:Views.Payment.PaymentMethodPage}"
         Route="MainPage" />
 
 </Shell>

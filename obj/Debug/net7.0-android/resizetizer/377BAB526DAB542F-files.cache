@@ -2,6 +2,7 @@
 obj/Debug/net7.0-android/resizetizer/r/drawable/user.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/user1.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/user2.png
+obj/Debug/net7.0-android/resizetizer/r/drawable/arrowright.png
 obj/Debug/net7.0-android/resizetizer/r/drawable/logongajilagi.png
 obj/Debug/net7.0-android/resizetizer/r/mipmap-xxhdpi/logongajilagi_background.png
 obj/Debug/net7.0-android/resizetizer/r/mipmap-xxhdpi/appicon_background.png
@@ -38,6 +39,7 @@ obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/loadingbacaan.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/date.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/book.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/result2.png
+obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/arrowright.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/result.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/logongajilagi.png
 obj/Debug/net7.0-android/resizetizer/r/mipmap-mdpi/logongajilagi_background.png
@@ -65,6 +67,7 @@ obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/loadingbacaan.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/date.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/book.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/result2.png
+obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/arrowright.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/result.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/logongajilagi.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/settings.png
@@ -80,6 +83,7 @@ obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/loadingbacaan.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/date.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/book.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/result2.png
+obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/arrowright.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/result.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-xhdpi/logongajilagi.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/settings.png
@@ -95,6 +99,7 @@ obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/loadingbacaan.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/date.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/book.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/result2.png
+obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/arrowright.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/result.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-hdpi/logongajilagi.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/settings.png
@@ -110,5 +115,6 @@ obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/loadingbacaan.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/date.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/book.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/result2.png
+obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/arrowright.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/result.png
 obj/Debug/net7.0-android/resizetizer/r/drawable-mdpi/logongajilagi.png
