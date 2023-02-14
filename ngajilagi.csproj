@@ -51,4 +51,6 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionngajilagiHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+
 </Project>

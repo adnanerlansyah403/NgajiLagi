@@ -12,109 +12,119 @@
             FontFamily="NunitoBold"
             FontAttributes="Bold"
             FontSize="24"
-            Padding="28,28,28,24" 
+            Padding="30,28,28,24" 
         />
 
         <!-- Body -->
         <FlexLayout FlexLayout.Grow="1">
 
             <!-- Content -->
-            <!-- <ScrollView Padding="28,0,28,0">
-                <VerticalStackLayout>
+            <ScrollView Padding="28,0,28,0">
+                <VerticalStackLayout Spacing="18">
 
-                    <HorizontalStackLayout Margin="0,28,0,28" Spacing="56" VerticalOptions="Center">
-                        <Label Text="Sesi Mengaji" FontAttributes="Bold" FontFamily="NunitoBold" FontSize="28" />
-                        <Frame Padding="10" CornerRadius="22" BackgroundColor="#F2F2F2">
-                            <HorizontalStackLayout VerticalOptions="Center" Spacing="8">
-                                <Image Source="time.svg"
-                                WidthRequest="15" HeightRequest="15" />
-                                <Label Text="Riwayat" FontFamily="NunitoBold" FontSize="14" Margin="0,-2,0,0" />
-                            </HorizontalStackLayout>
-                        </Frame>
-                    </HorizontalStackLayout>
+                    <Frame Padding="20,24,20,24" CornerRadius="24">
+                        <HorizontalStackLayout VerticalOptions="Center" Spacing="125">
+                            <Label Text="Pembayaran Instan" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
+                            <Image Source="arrowbottom.svg" WidthRequest="7" HeightRequest="11" />
+                        </HorizontalStackLayout>
+                    </Frame>
 
-                    <VerticalStackLayout Margin="0,0,0,24">
-                        <Label Text="Hari Ini" FontAttributes="Bold" FontFamily="NunitoBold" FontSize="24" />
-
-                        <Frame Margin="0,12,0,0" Padding="12" CornerRadius="12" BackgroundColor="#88984A">
-                            <VerticalStackLayout Spacing="12">
-                                <HorizontalStackLayout Spacing="12">
-                                    <Image Source="user1.png" WidthRequest="74" HeightRequest="103" />
-                                    <VerticalStackLayout Spacing="8" VerticalOptions="Center">
-                                        <Label Text="Dalene Robertson" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" TextColor="#fff" />
-                                        <Label Text="QS. Al Baqarah:45" FontFamily="NunitoRegular" FontAttributes="Bold" FontSize="13" TextColor="#fff" />
-                                        <HorizontalStackLayout Spacing="4">
-                                            <Image Source="timewhite.svg" />
-                                            <Label Text="08:00 - 09:00" FontFamily="NunitoBold" FontSize="13" TextColor="#fff" />
-                                        </HorizontalStackLayout>
-                                    </VerticalStackLayout>
+                    <Frame Padding="20,24,20,24" CornerRadius="24" x:Name="transferva">
+                        <VerticalStackLayout>
+                            <Grid ColumnDefinitions=".8*,Auto" VerticalOptions="Center">
+                                <Label Text="Transfer Virtual Account" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
+                                <Image Source="arrowright.svg" HorizontalOptions="End" WidthRequest="7" HeightRequest="11" />
+                            </Grid>    
+                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,18,0,16" Margin="0,16,0,16">
+                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                    <Image Source="bcaasia.png" WidthRequest="36" HeightRequest="11" />
+                                    <Label Text="BCA Virtual Account" FontFamily="Nunito" FontSize="14" />
                                 </HorizontalStackLayout>
-                                <Button Text="Mulai Mengaji" BackgroundColor="#F4DD8F" CornerRadius="12" FontSize="14" FontFamily="NunitoBold" TextColor="#313131" />
-                            </VerticalStackLayout>
-                        </Frame>
+                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                            </FlexLayout>
+                            <Line X2="300" BackgroundColor="#F2F2F2" />
+                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                    <Image Source="mandiri.png" WidthRequest="36" HeightRequest="11" />
+                                    <Label Text="Mandiri Virtual Account" FontFamily="Nunito" FontSize="14" />
+                                </HorizontalStackLayout>
+                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                            </FlexLayout>
+                            <Line X2="300" BackgroundColor="#F2F2F2" />
+                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                    <Image Source="bni.png" WidthRequest="36" HeightRequest="11" />
+                                    <Label Text="BNI Virtual Account" FontFamily="Nunito" FontSize="14" />
+                                </HorizontalStackLayout>
+                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                            </FlexLayout>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                    </VerticalStackLayout>
+                    <Frame Padding="20,24,20,24" CornerRadius="24">
+                        <Grid ColumnDefinitions=".8*,Auto" VerticalOptions="Center">
+                            <Label Text="Transfer Bank (Verifikasi Manual)" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
+                            <Image Source="arrowright.svg" HorizontalOptions="End" WidthRequest="7" HeightRequest="11" />
+                        </Grid>
+                    </Frame>
 
-                    <VerticalStackLayout Margin="0,24,0,0">
-                        <Label Text="Yang akan datang" FontSize="24" FontFamily="NunitoBold" />
-                        
-                        <HorizontalStackLayout Padding="0,24,0,16" Spacing="12">
-                                
-                            <Image Source="user2.png" WidthRequest="54" HeightRequest="54" />
+                    <Frame Padding="20,24,20,24" CornerRadius="24">
+                        <Grid ColumnDefinitions=".8*,Auto" VerticalOptions="Center">
+                            <Label Text="Kartu Kredit Atau Debit" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
+                            <Image Source="arrowright.svg" HorizontalOptions="End" WidthRequest="7" HeightRequest="11" />
+                        </Grid>
+                    </Frame>
 
-                            <VerticalStackLayout Spacing="4" VerticalOptions="Center">
-                                    <Label Text="Dalene Robertson" 
-                                        FontFamily="NunitoBold"
-                                        FontSize="20"
-                                    />
-                                    <Label Text="Sabtu, 3 Apr 2021  •  13:00 PM " 
-                                        FontFamily="NunitoRegular"
-                                        FontSize="13"
-                                        TextColor="#88984A"
-                                    />
-                            </VerticalStackLayout>
+                    <Frame Padding="20,24,20,24" CornerRadius="24">
+                        <VerticalStackLayout>
+                            <Grid ColumnDefinitions=".8*,Auto" VerticalOptions="Center">
+                                <Label Text="Tunai Di Gerai Detail" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
+                                <Image Source="arrowright.svg" HorizontalOptions="End" WidthRequest="7" HeightRequest="11" />
+                            </Grid>
+                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                    <Image Source="indomaret.png" WidthRequest="36" HeightRequest="11" />
+                                    <Label Text="Indomaret" FontFamily="Nunito" FontSize="14" />
+                                </HorizontalStackLayout>
+                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                            </FlexLayout>
+                            <Line X2="300" BackgroundColor="#F2F2F2" />
+                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                    <Image Source="alfamart.png" WidthRequest="36" HeightRequest="11" />
+                                    <Label Text="Alfamart" FontFamily="Nunito" FontSize="14" />
+                                </HorizontalStackLayout>
+                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                            </FlexLayout>
+                        </VerticalStackLayout>
+                    </Frame>
 
-                        </HorizontalStackLayout>
-                        
-                        <Line Stroke="#F2F2F2"
-                        X2="350" />
-
-                        <HorizontalStackLayout Padding="0,16,0,16" Spacing="12">
-                                
-                            <Image Source="user2.png" WidthRequest="54" HeightRequest="54" />
-
-                            <VerticalStackLayout Spacing="4" VerticalOptions="Center">
-                                    <Label Text="Dalene Robertson" 
-                                        FontFamily="NunitoBold"
-                                        FontSize="20"
-                                    />
-                                    <Label Text="Sabtu, 3 Apr 2021  •  13:00 PM " 
-                                        FontFamily="NunitoRegular"
-                                        FontSize="13"
-                                        TextColor="#88984A"
-                                    />
-                            </VerticalStackLayout>
-
-                        </HorizontalStackLayout>
-                        
-                        <Line Stroke="#F2F2F2"
-                        X2="350" />
-                    </VerticalStackLayout>
-                
                 </VerticalStackLayout>
-            </ScrollView> -->
+            </ScrollView>
 
         </FlexLayout>
 
         <!-- Footer -->
         <VerticalStackLayout VerticalOptions="End" Padding="28,24,28,24">
-            <Frame CornerRadius="25" Padding="20,21,20,21" BackgroundColor="#C0C0C0">
+            <!-- <Frame CornerRadius="25" Padding="20,21,20,21" BackgroundColor="#C0C0C0">
                 <StackLayout Orientation="Horizontal" Spacing="54">
                     <Label Text="Bayar Sekarang" TextColor="#fff" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start"
                         VerticalOptions="Center" />
                     <HorizontalStackLayout Spacing="10">
                         <Label Text="10.000" TextColor="#fff" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" Grid.Column="2" />
                         <Frame WidthRequest="18" HeightRequest="18" Padding="4" BackgroundColor="#FFF" CornerRadius="23">
+                            <Image Source="arrowright.svg" WidthRequest="4" HeightRequest="4" />
+                        </Frame>
+                    </HorizontalStackLayout>
+                </StackLayout>
+            </Frame> !-->
+            <Frame CornerRadius="25" Padding="20,21,20,21" BorderColor="Transparent" BackgroundColor="#FFD53F">
+                <StackLayout Orientation="Horizontal" Spacing="54">
+                    <Label Text="Bayar Sekarang" TextColor="#000" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start"
+                        VerticalOptions="Center" />
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="10.000" TextColor="#000" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" Grid.Column="2" />
+                        <Frame WidthRequest="18" HeightRequest="18" Padding="4" BorderColor="Transparent" BackgroundColor="#000" CornerRadius="23">
                             <Image Source="arrowright.svg" WidthRequest="4" HeightRequest="4" />
                         </Frame>
                     </HorizontalStackLayout>
