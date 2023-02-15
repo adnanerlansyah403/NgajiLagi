@@ -2141,3 +2141,8 @@ C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\resizetizer\r\dra
 C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\resizetizer\r\drawable\bni.png
 C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\resizetizer\r\drawable\indomaret.png
 C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\resizetizer\r\drawable\mandiri.png
+C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Maui.Core.dll
+C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Maui.dll
+C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\android\src\crc64159f3caeb1269279\MauiDrawingView.java
+C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\android\src\crc64159f3caeb1269279\MauiPopup.java
+C:\Users\adnan\source\repos\NgajiLagi\obj\Debug\net7.0-android\android\src\crc648fc34c62be8fbbff\Snackbar_SnackbarCallback.java

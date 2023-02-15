@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Shell.NavBarIsVisible="False"
              x:Class="ngajilagi.Views.Payment.PaymentMethodPage">
 
@@ -12,11 +13,11 @@
             FontFamily="NunitoBold"
             FontAttributes="Bold"
             FontSize="24"
-            Padding="30,28,28,24" 
+            Padding="32,28,28,24" 
         />
-
+        
         <!-- Body -->
-        <FlexLayout FlexLayout.Grow="1">
+        <VerticalStackLayout FlexLayout.Grow="1">
 
             <!-- Content -->
             <ScrollView Padding="28,0,28,0">
@@ -29,35 +30,54 @@
                         </HorizontalStackLayout>
                     </Frame>
 
-                    <Frame Padding="20,24,20,24" CornerRadius="24" x:Name="transferva">
+                    <Frame Padding="20,24,20,24" CornerRadius="24">
                         <VerticalStackLayout>
-                            <Grid ColumnDefinitions=".8*,Auto" VerticalOptions="Center">
-                                <Label Text="Transfer Virtual Account" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
-                                <Image Source="arrowright.svg" HorizontalOptions="End" WidthRequest="7" HeightRequest="11" />
-                            </Grid>    
-                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,18,0,16" Margin="0,16,0,16">
-                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
-                                    <Image Source="bcaasia.png" WidthRequest="36" HeightRequest="11" />
-                                    <Label Text="BCA Virtual Account" FontFamily="Nunito" FontSize="14" />
-                                </HorizontalStackLayout>
-                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
-                            </FlexLayout>
-                            <Line X2="300" BackgroundColor="#F2F2F2" />
-                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
-                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
-                                    <Image Source="mandiri.png" WidthRequest="36" HeightRequest="11" />
-                                    <Label Text="Mandiri Virtual Account" FontFamily="Nunito" FontSize="14" />
-                                </HorizontalStackLayout>
-                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
-                            </FlexLayout>
-                            <Line X2="300" BackgroundColor="#F2F2F2" />
-                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
-                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
-                                    <Image Source="bni.png" WidthRequest="36" HeightRequest="11" />
-                                    <Label Text="BNI Virtual Account" FontFamily="Nunito" FontSize="14" />
-                                </HorizontalStackLayout>
-                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
-                            </FlexLayout>
+                            
+                            <toolkit:Expander>
+                                <toolkit:Expander.Header>
+                                    <VerticalStackLayout>
+                                        <Grid ColumnDefinitions=".8*,Auto" VerticalOptions="Center">
+                                            <Label Text="Transfer Virtual Account" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
+                                            <Image Source="arrowright.svg" HorizontalOptions="End" Margin="0,0,5,0" WidthRequest="7" HeightRequest="11" x:Name="toggleTransferVA" />
+                                        </Grid>
+
+
+                                        <VerticalStackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapTransferVA" />
+                                        </VerticalStackLayout.GestureRecognizers>
+                                    </VerticalStackLayout>
+                                </toolkit:Expander.Header>
+                                <VerticalStackLayout Padding="0,18,0,16">
+
+                                    <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                        <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                            <Image Source="bcaasia.png" WidthRequest="36" HeightRequest="11" />
+                                            <Label Text="BCA Virtual Account" FontFamily="Nunito" FontSize="14" />
+                                        </HorizontalStackLayout>
+                                        <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                                    </FlexLayout>
+                                    <Line X2="300" BackgroundColor="#F2F2F2" />
+                                    <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                        <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                            <Image Source="mandiri.png" WidthRequest="36" HeightRequest="11" />
+                                            <Label Text="Mandiri Virtual Account" FontFamily="Nunito" FontSize="14" />
+                                        </HorizontalStackLayout>
+                                        <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                                    </FlexLayout>
+                                    <Line X2="300" BackgroundColor="#F2F2F2" />
+                                    <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                        <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                            <Image Source="bni.png" WidthRequest="36" HeightRequest="11" />
+                                            <Label Text="BNI Virtual Account" FontFamily="Nunito" FontSize="14" />
+                                        </HorizontalStackLayout>
+                                        <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                                    </FlexLayout>
+                                    <Line X2="300" BackgroundColor="#F2F2F2" />
+
+                                </VerticalStackLayout>
+                            </toolkit:Expander>
+                            
+                     
                         </VerticalStackLayout>
                     </Frame>
 
@@ -76,33 +96,49 @@
                     </Frame>
 
                     <Frame Padding="20,24,20,24" CornerRadius="24">
-                        <VerticalStackLayout>
-                            <Grid ColumnDefinitions=".8*,Auto" VerticalOptions="Center">
-                                <Label Text="Tunai Di Gerai Detail" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
-                                <Image Source="arrowright.svg" HorizontalOptions="End" WidthRequest="7" HeightRequest="11" />
-                            </Grid>
-                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
-                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
-                                    <Image Source="indomaret.png" WidthRequest="36" HeightRequest="11" />
-                                    <Label Text="Indomaret" FontFamily="Nunito" FontSize="14" />
-                                </HorizontalStackLayout>
-                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
-                            </FlexLayout>
-                            <Line X2="300" BackgroundColor="#F2F2F2" />
-                            <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
-                                <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
-                                    <Image Source="alfamart.png" WidthRequest="36" HeightRequest="11" />
-                                    <Label Text="Alfamart" FontFamily="Nunito" FontSize="14" />
-                                </HorizontalStackLayout>
-                                <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
-                            </FlexLayout>
-                        </VerticalStackLayout>
+
+                        <toolkit:Expander>
+                            <toolkit:Expander.Header>
+                                <VerticalStackLayout>
+                                    <Grid ColumnDefinitions=".8*,Auto" VerticalOptions="Center">
+                                        <Label Text="Tunai Di Gerai Detail" FontFamily="NunitoBold" FontSize="16" FontAttributes="Bold" />
+                                        <Image Source="arrowright.svg" HorizontalOptions="End" WidthRequest="7" HeightRequest="11" Margin="0,0,5,0" x:Name="toggleTunaiGerai" />
+                                    </Grid>
+
+                                    <VerticalStackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapTunaiGerai" />
+                                    </VerticalStackLayout.GestureRecognizers>
+                                </VerticalStackLayout>
+                            </toolkit:Expander.Header>
+                            <VerticalStackLayout Padding="0,18,0,16">
+
+                                <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                    <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                        <Image Source="indomaret.png" WidthRequest="36" HeightRequest="11" />
+                                        <Label Text="Indomaret" FontFamily="Nunito" FontSize="14" />
+                                    </HorizontalStackLayout>
+                                    <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                                </FlexLayout>
+                                <Line X2="300" BackgroundColor="#F2F2F2" />
+                                <FlexLayout JustifyContent="SpaceBetween" Padding="0,16,0,16" Margin="0,16,0,16">
+                                    <HorizontalStackLayout Spacing="10" FlexLayout.Grow="1">
+                                        <Image Source="alfamart.png" WidthRequest="36" HeightRequest="11" />
+                                        <Label Text="Alfamart" FontFamily="Nunito" FontSize="14" />
+                                    </HorizontalStackLayout>
+                                    <CheckBox Color="#88984A" HorizontalOptions="End" FlexLayout.Grow="1" WidthRequest="20" HeightRequest="20" />
+                                </FlexLayout>
+                                <Line X2="300" BackgroundColor="#F2F2F2" />
+
+                            </VerticalStackLayout>
+                        </toolkit:Expander>
+                        
                     </Frame>
 
                 </VerticalStackLayout>
+
             </ScrollView>
 
-        </FlexLayout>
+        </VerticalStackLayout>
 
         <!-- Footer -->
         <VerticalStackLayout VerticalOptions="End" Padding="28,24,28,24">
@@ -113,7 +149,7 @@
                     <HorizontalStackLayout Spacing="10">
                         <Label Text="10.000" TextColor="#fff" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" Grid.Column="2" />
                         <Frame WidthRequest="18" HeightRequest="18" Padding="4" BackgroundColor="#FFF" CornerRadius="23">
-                            <Image Source="arrowright.svg" WidthRequest="4" HeightRequest="4" />
+                            <Image Source="arrowright.svg" WidthRequest="5" HeightRequest="10" />
                         </Frame>
                     </HorizontalStackLayout>
                 </StackLayout>
@@ -125,7 +161,7 @@
                     <HorizontalStackLayout Spacing="10">
                         <Label Text="10.000" TextColor="#000" FontFamily="NunitoBold" FontAttributes="Bold" FontSize="18" Grid.Column="2" />
                         <Frame WidthRequest="18" HeightRequest="18" Padding="4" BorderColor="Transparent" BackgroundColor="#000" CornerRadius="23">
-                            <Image Source="arrowright.svg" WidthRequest="4" HeightRequest="4" />
+                            <Image Source="arrowright.svg" WidthRequest="5" HeightRequest="10" />
                         </Frame>
                     </HorizontalStackLayout>
                 </StackLayout>

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jp5lixyAf6CJOKMbrazdNFZuZ3mXzaN3gRAFGF+oY9iIXM9BPypGkdJo9Q3sO3TZQjgZBHq59H7zMn2Zbh7c5w==",
+  "dgSpecHash": "P+2Xq/QOzAEdyZXG5ae7+/bUeR5wkFo5ImcYV055dzgLbn0RNcb6BqW8W3c6f3ysMLfYeLDWlPnDSzST2wD+5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\adnan\\source\\repos\\NgajiLagi\\ngajilagi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\adnan\\.nuget\\packages\\communitytoolkit.maui\\4.0.0\\communitytoolkit.maui.4.0.0.nupkg.sha512",
+    "C:\\Users\\adnan\\.nuget\\packages\\communitytoolkit.maui.core\\4.0.0\\communitytoolkit.maui.core.4.0.0.nupkg.sha512",
     "C:\\Users\\adnan\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\adnan\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\adnan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
