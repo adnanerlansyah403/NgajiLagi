@@ -1,3 +1,29 @@
-﻿.border {
-	border: none;
+﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.fw800 {
+    font-weight: 800;
+}
+
+.fw900 {
+    font-weight: 900;
 }

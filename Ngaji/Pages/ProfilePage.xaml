@@ -1,12 +1,76 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
              x:Class="Ngaji.Pages.ProfilePage"
+             NavigationPage.HasNavigationBar="False"
              Title="Profile">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="28">
+
+        <HorizontalStackLayout Margin="0,0,0,44" Spacing="12">
+
+            <ImageButton Source="avatarprofile.png" WidthRequest="120" HeightRequest="166" Aspect="AspectFill" CornerRadius="20"  VerticalOptions="FillAndExpand" />
+            <VerticalStackLayout VerticalOptions="Center">
+                <Label Text="Fulan Fulana" FontSize="22" FontFamily="NunitoBold" />
+                <Label Text="fulan@gmail.com" TextColor="{DynamicResource Primary}" FontSize="16" FontFamily="NunitoBold" />
+                <Frame 
+                    BackgroundColor="#F7B548" 
+                    Padding="14,10,14,10" 
+                    VerticalOptions="Center" 
+                    BorderColor="Transparent" 
+                    Margin="0,12,0,0" 
+                    CornerRadius="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="EditProfile_Clicked">
+                            
+                        </TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                        <Image Source="pen.svg" />
+                        <Label Text="Edit Profile" TextColor="#313131" FontSize="13" FontFamily="NunitoBold" />
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+            
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout Spacing="50">
+            <Button Text="Ganti Password" 
+                    BackgroundColor="Transparent" TextColor="Black" 
+                    FontSize="16" 
+                    FontFamily="Nunito" 
+                    FontAttributes="Bold" 
+                    HorizontalOptions="Start"
+                    Padding="0"
+                    Clicked="ChangePassword_Clicked"
+            />
+            <Button Text="Konsultasi" 
+                    BackgroundColor="Transparent" TextColor="Black" 
+                    FontSize="16" 
+                    FontFamily="Nunito" 
+                    FontAttributes="Bold" 
+                    HorizontalOptions="Start"
+                    Padding="0"
+            />
+            <Button Text="Notifikasi" 
+                    BackgroundColor="Transparent" TextColor="Black" 
+                    FontSize="16" 
+                    FontFamily="Nunito" 
+                    FontAttributes="Bold" 
+                    HorizontalOptions="Start"
+                    Padding="0"
+            />
+            <Button Text="Logout" 
+                    BackgroundColor="Transparent" 
+                    TextColor="#EB5757" 
+                    Margin="0,26,0,0" 
+                    FontSize="16" 
+                    FontFamily="Nunito" 
+                    FontAttributes="Bold" 
+                    HorizontalOptions="Start"
+                    Padding="0"
+            />
+        </VerticalStackLayout>
+        
     </VerticalStackLayout>
 </ContentPage>

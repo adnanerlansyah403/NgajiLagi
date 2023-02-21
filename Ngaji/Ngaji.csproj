@@ -66,12 +66,13 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+	</ItemGroup>
+
   <ItemGroup>
     <Compile Update="Pages\Auth\LupaPassword.xaml.cs">
       <DependentUpon>LupaPassword.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Auth\Register.xaml.cs">
-      <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\Auth\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -100,7 +101,25 @@
     <MauiXaml Update="Pages\Auth\LupaPassword.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Pages\Auth\Register.xaml">
+    <MauiXaml Update="Pages\Auth\Register\ChooseLevel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Auth\Register\ChooseTarget.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Auth\Register\CodeReferral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Auth\Register\CreateAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Auth\Register\CreateProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Auth\Register\FinalRegistration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Book\Schedule.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Pages\LandingPage.xaml">
@@ -118,9 +137,13 @@
     <MauiXaml Update="Pages\NotifPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Pages\User\ChangePassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\User\EditProfile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Book\" />
-  </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionNgajiHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 </Project>

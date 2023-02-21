@@ -6,6 +6,8 @@
     xmlns:local="clr-namespace:Ngaji"
     xmlns:pages="clr-namespace:Ngaji.Pages"
     xmlns:auth="clr-namespace:Ngaji.Pages.Auth"
+    xmlns:authRegis="clr-namespace:Ngaji.Pages.Auth.Register"
+    xmlns:book="clr-namespace:Ngaji.Pages.Book"
     Shell.FlyoutBehavior="Disabled">
     
     <TabBar>
@@ -32,12 +34,46 @@
             <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}" />
         </Tab>
     </TabBar>
-    <ShellContent
-                Title="Login"
-                ContentTemplate="{DataTemplate auth:Login}"
-                Route="LoginPage" />
-    <ShellContent
-                Title="Register"
-                ContentTemplate="{DataTemplate auth:Register}"
-                Route="RegisterPage" />
+
+    <FlyoutItem Route="auth">
+        <ShellContent
+            Title="Login"
+            Route="login"
+            ContentTemplate="{DataTemplate auth:Login}"    
+        />
+        
+        <!-- Register Routes -->
+        <ShellContent
+            Title="Choose Target"
+            Route="choosetarget"
+            ContentTemplate="{DataTemplate authRegis:ChooseTarget}"
+        />
+        <ShellContent
+            Title="Choose Level"
+            Route="chooselevel"
+            ContentTemplate="{DataTemplate authRegis:ChooseLevel}"
+        />
+        <ShellContent
+            Title="Create Account"
+            Route="createaccount"
+            ContentTemplate="{DataTemplate authRegis:CreateAccount}"
+        />
+        <ShellContent
+            Title="Create Profile"
+            Route="createprofile"
+            ContentTemplate="{DataTemplate authRegis:CreateProfile}"
+        />
+        <ShellContent
+            Title="Code Referral"
+            Route="codereferral"
+            ContentTemplate="{DataTemplate authRegis:CodeReferral}"
+        />
+        <ShellContent
+            Title="Final Registration"
+            Route="finalregistration"
+            ContentTemplate="{DataTemplate authRegis:FinalRegistration}"
+        />
+    </FlyoutItem>
+
+
 </Shell>

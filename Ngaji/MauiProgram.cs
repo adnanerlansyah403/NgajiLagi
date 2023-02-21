@@ -11,8 +11,10 @@ public static class MauiProgram
 			{
                 fonts.AddFont("Nunito-Italic-VariableFont_wght.ttf", "NunitoItalic");
                 fonts.AddFont("Nunito-VariableFont_wght.ttf", "Nunito");
+                fonts.AddFont("Nunito-Bold.ttf", "NunitoBold");
                 fonts.AddFont("Nunito-Black.ttf", "Nunito-black");
             });
+
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CleanEntry", (handler, view) =>
         {
             #if WINDOWS

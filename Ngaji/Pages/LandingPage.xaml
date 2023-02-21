@@ -2,219 +2,127 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ngaji.Pages.LandingPage"
-             Shell.NavBarIsVisible="True" 
+             Shell.NavBarIsVisible="True"
+             Shell.TabBarIsVisible="True"
+             NavigationPage.HasNavigationBar="True"
+             xmlns:data="clr-namespace:Ngaji.Data"
+             xmlns:viewModels="clr-namespace:Ngaji.ViewModels"
+             x:DataType="viewModels:UstadzsViewModel"
              BackgroundColor="{DynamicResource SecondaryColor}">
+    
+    
     <Shell.TitleView>
-        <FlexLayout JustifyContent="SpaceAround">
-            <Image
+        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" VerticalOptions="Center" Padding="0,12,0,12" Margin="28,0,28,0">
+            <VerticalStackLayout VerticalOptions="Center">
+                <Image
                     Source="logo.png"
                     HeightRequest="24"
                     WidthRequest="34"
-                    Margin="16,12,16,12"
-                    Aspect="AspectFit"
-                    HorizontalOptions="Start"/>
-            <HorizontalStackLayout >
-                <Button Text="Masuk"
-                            class="Rounded"
-                            CornerRadius="32"
-                            Padding="16,12,16,12"
-                            FontFamily="Nunito-black"
-                            FontSize="16"
-                            BorderColor="Transparent"
-                            TextColor="{StaticResource Primary}"
-                            BackgroundColor="Transparent"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center"
-                            WidthRequest="82"
-                            HeightRequest="40"
-                            Clicked="GotoLogin"/>
-
-                <Button Text="Daftar"
-                            class="Rounded"
-                            CornerRadius="16"
-                            Padding="16,12,16,12"
-                            FontSize="12"
-                            FontFamily="Nunito-black"
-                            TextColor="White"
-                            BorderColor="Transparent"
-                            BackgroundColor="{StaticResource Primary}"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            WidthRequest="82"
-                            HeightRequest="40"/>
+                    VerticalOptions="Center"
+                />
+            </VerticalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="End">
+                <Button 
+                    Text="Masuk"
+                    TextColor="{DynamicResource Primary}"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    FontFamily="NunitoBold"
+                    BackgroundColor="Transparent"
+                    Clicked="GotoLogin"
+                />
+                <Button 
+                    Text="Daftar"
+                    TextColor="{DynamicResource White}"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    FontFamily="NunitoBold"
+                    CornerRadius="23"
+                    WidthRequest="81"
+                    HeightRequest="40"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                />
             </HorizontalStackLayout>
         </FlexLayout>
     </Shell.TitleView>
-    <ScrollView>
-        <VerticalStackLayout Padding="28"
-        Spacing="25">
+
+    <ScrollView Margin="0,28,0,28" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+        
+        <VerticalStackLayout
+        Spacing="25" Padding="28,0,28,0">
             <Frame
-                BorderColor="Black"
-                BackgroundColor="Transparent"
+                BackgroundColor="{DynamicResource White}"
                 CornerRadius="16"
-                Padding="0"
-                WidthRequest="280"
-                Scale="1.4"
-                HeightRequest="32"
+                Padding="28,14,28,14"
                 IsClippedToBounds="True"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" >
-                <SearchBar Text="Mulai Mengaji Sekarang" 
-                        FlowDirection="RightToLeft" 
-                        Margin="28,0,28,0"
-                        PlaceholderColor="Black"
-                        FontSize="16"
-                        FontFamily="Nunito"
-                        Background="Transparent"
-                        HorizontalTextAlignment="End"
-                        VerticalOptions="Center"
-                        VerticalTextAlignment="Center"
-                        HorizontalOptions="CenterAndExpand"
-                        />
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center">
+                <HorizontalStackLayout Spacing="11">
+                    <Image Source="searchicon.svg" WidthRequest="19" HeightRequest="19" />
+                    <Entry Placeholder="Mulai Mengaji Sekarang" FontFamily="NunitoBold" FontSize="18" />
+                </HorizontalStackLayout>
             </Frame>
             <Label Text="Ustadz Di Sekitarmu" FontFamily="Nunito-black"
                     FontSize="28"
-                    HorizontalOptions="Center" 
+                    HorizontalOptions="Start" 
                     />
             <VerticalStackLayout Spacing="12">
-                <Border Stroke="#F2F2F2"
-                    StrokeThickness="2"
-                    StrokeShape="RoundRectangle 16"
-                    WidthRequest="319"
-                    HeightRequest="97"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                    <HorizontalStackLayout VerticalOptions="Center" Padding="12"  Spacing="12"
-                    HeightRequest="97">
-                        <Frame CornerRadius="12"
-                            BorderColor="Black"
-                            BackgroundColor="Transparent"
-                            Padding="0" VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                            WidthRequest="71"
-                            HeightRequest="71" >
-                            <Image Source="avatar.png" WidthRequest="71"
-                            HeightRequest="71" Aspect="AspectFill"  />
-                        </Frame>
-                        <VerticalStackLayout Spacing="8" VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                            <Label Text="Cheyenne Lewwvin" />
-                            <Label Text="NgajiLagi Official"
-                                FontFamily="Nunito"
-                                FontAttributes="Bold"
-                                FontSize="12"
-                                TextColor="{StaticResource Primary}"
-                                HorizontalOptions="Start"/>
-                            <HorizontalStackLayout Spacing="20">
-                                <HorizontalStackLayout>
-                                    <Image Source="star.png" />
-                                    <Label Text="4.7" />
+
+                <RefreshView Grid.Row="1" Grid.Column="0" IsRefreshing="{Binding IsRefreshing}" x:Name="refreshView" 
+                     Command="{Binding LoadDataCommand}">
+                    <CollectionView  Margin="30,20,30,30"
+                             ItemsSource="{Binding Ustadzs}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Vertical" ItemSpacing="20" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.EmptyView>
+                            <ContentView>
+                                <Label Text="Empty Data" />
+                            </ContentView>
+                        </CollectionView.EmptyView>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="data:Ustadz">
+                                <VerticalStackLayout Padding="15,10" Margin="10,5,10,5">
+                                    <Label Text="{Binding Username, StringFormat='Username : {0}'}" FontSize="Title" Margin="0,0,0,20"/>
+                                    <Label Text="{Binding Email, StringFormat='Email : {0}'}"/>
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </RefreshView>
+
+                <Frame Padding="12">
+                    <HorizontalStackLayout Spacing="16">
+                        <Image Source="avatar.png" WidthRequest="71" HeightRequest="71"  />
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Cheyne Levin" FontFamily="NunitoBold" FontSize="16" />
+                            <Label Text="NgajiLagi Official" FontFamily="NunitoBold" TextColor="{DynamicResource Primary}" FontSize="12" />
+                            <StackLayout Orientation="Horizontal" Spacing="23">
+                                <HorizontalStackLayout Spacing="5" FlexLayout.Grow="1" VerticalOptions="Center">
+                                    <Image Source="star.svg" />
+                                    <Label Text="4.7" FontFamily="NunitoBold" FontSize="14" />
                                 </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Image Source="loc.png" />
-                                    <Label Text="Bandung" />
+                                <HorizontalStackLayout Spacing="5" FlexLayout.Grow="1" VerticalOptions="Center">
+                                    <Image Source="loc.svg" />
+                                    <Label Text="Bandung" FontFamily="NunitoBold" FontSize="14" />
                                 </HorizontalStackLayout>
-                            </HorizontalStackLayout>
+                            </StackLayout>
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
-                </Border>
-                <Border Stroke="#F2F2F2"
-                    StrokeThickness="2"
-                    StrokeShape="RoundRectangle 16"
-                    WidthRequest="319"
-                    HeightRequest="97"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                    <HorizontalStackLayout VerticalOptions="Center" Padding="12"  Spacing="12"
-                    HeightRequest="97">
-                        <Frame CornerRadius="12"
-                            BorderColor="Black"
-                            BackgroundColor="Transparent"
-                            Padding="0" VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                            WidthRequest="71"
-                            HeightRequest="71" >
-                            <Image Source="avatar.png" WidthRequest="71"
-                            HeightRequest="71" Aspect="AspectFill"  />
-                        </Frame>
-                        <VerticalStackLayout Spacing="8" VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                            <Label Text="Cheyenne Lewwvin" />
-                            <Label Text="NgajiLagi Official"
-                                FontFamily="Nunito"
-                                FontAttributes="Bold"
-                                FontSize="12"
-                                TextColor="{StaticResource Primary}"
-                                HorizontalOptions="Start"/>
-                            <HorizontalStackLayout Spacing="20">
-                                <HorizontalStackLayout>
-                                    <Image Source="star.png" />
-                                    <Label Text="4.7" />
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Image Source="loc.png" />
-                                    <Label Text="Bandung" />
-                                </HorizontalStackLayout>
-                            </HorizontalStackLayout>
-                        </VerticalStackLayout>
-                    </HorizontalStackLayout>
-                </Border>
-                <Border Stroke="#F2F2F2"
-                    StrokeThickness="2"
-                    StrokeShape="RoundRectangle 16"
-                    WidthRequest="319"
-                    HeightRequest="97"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                    <HorizontalStackLayout VerticalOptions="Center" Padding="12"  Spacing="12"
-                    HeightRequest="97">
-                        <Frame CornerRadius="12"
-                            BorderColor="Black"
-                            BackgroundColor="Transparent"
-                            Padding="0" VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                            WidthRequest="71"
-                            HeightRequest="71" >
-                            <Image Source="avatar.png" WidthRequest="71"
-                            HeightRequest="71" Aspect="AspectFill"  />
-                        </Frame>
-                        <VerticalStackLayout Spacing="8" VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                            <Label Text="Cheyenne Lewwvin" />
-                            <Label Text="NgajiLagi Official"
-                                FontFamily="Nunito"
-                                FontAttributes="Bold"
-                                FontSize="12"
-                                TextColor="{StaticResource Primary}"
-                                HorizontalOptions="Start"/>
-                            <HorizontalStackLayout Spacing="20">
-                                <HorizontalStackLayout>
-                                    <Image Source="star.png" />
-                                    <Label Text="4.7" />
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout>
-                                    <Image Source="loc.png" />
-                                    <Label Text="Bandung" />
-                                </HorizontalStackLayout>
-                            </HorizontalStackLayout>
-                        </VerticalStackLayout>
-                    </HorizontalStackLayout>
-                </Border>
+                </Frame>
             </VerticalStackLayout>
 
             <Border Stroke="{StaticResource Primary}"
                     StrokeThickness="2"
                     StrokeShape="RoundRectangle 32"
                     BackgroundColor="Transparent"
-                    Padding="0"
-                    WidthRequest="319"
-                    HeightRequest="43.08"
-                    HorizontalOptions="Center"
+                    Padding="0,14,0,14"
+                    HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center" >
                 <Label Text="Lihat Semua Ustadz/ah" 
                        FontFamily="Nunito-black"
                        FontSize="16"
-                       Padding="63,0"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        TextColor="{StaticResource Primary}"
@@ -224,123 +132,42 @@
                     TextColor="Black"
                     FontFamily="Nunito-black"
                     FontSize="28"
-                    Padding="63,0"
-                    HorizontalOptions="Center"
+                    HorizontalOptions="Start"
                     VerticalOptions="Center" />
-            <Border Stroke="#F2F2F2"
-                    StrokeThickness="2"
-                    StrokeShape="RoundRectangle 24"
-                    WidthRequest="319"
-                    HeightRequest="120"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                <HorizontalStackLayout Spacing="12" Padding="1" VerticalOptions="Center" HorizontalOptions="Center"
-                    HeightRequest="120">
-                    <Frame CornerRadius="24"
-                            BorderColor="Gray"
-                            Padding="0" VerticalOptions="Center"
-                            HorizontalOptions="Center"
-                            WidthRequest="100"
-                            HeightRequest="100" >
-                        <Image Source="ngaji.png" WidthRequest="100"
-                            HeightRequest="100" Aspect="AspectFill"  />
-                    </Frame>
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center"
-                        HorizontalOptions="Start">
-                        <Label Text="Amet minim mollit non deserunt ulla..."
-                               WidthRequest="165"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Start" />
-                        <Label Text="3 days ago"
-                                FontFamily="Nunito"
-                                FontSize="10"
-                                TextColor="#C0C0C0"
-                                HorizontalOptions="Start" />
-                        <Label Text="Amet minim mollit non deserunt ullamco est sit"
-                                FontFamily="Nunito"
-                                FontSize="10"
-                                TextColor="#313131"
-                                WidthRequest="152"
-                                HorizontalOptions="Start"/>
-                    </VerticalStackLayout>
-                </HorizontalStackLayout>
-            </Border>
-            <Border Stroke="#F2F2F2"
-                    StrokeThickness="2"
-                    StrokeShape="RoundRectangle 24"
-                    WidthRequest="319"
-                    HeightRequest="120"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                <HorizontalStackLayout Spacing="12" Padding="1" VerticalOptions="Center" HorizontalOptions="Center"
-                    HeightRequest="120">
-                    <Frame CornerRadius="24"
-                            BorderColor="Gray"
-                            Padding="0" VerticalOptions="Center"
-                            HorizontalOptions="Center"
-                            WidthRequest="100"
-                            HeightRequest="100" >
-                        <Image Source="ngaji.png" WidthRequest="100"
-                            HeightRequest="100" Aspect="AspectFill"  />
-                    </Frame>
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center"
-                        HorizontalOptions="Start">
-                        <Label Text="Amet minim mollit non deserunt ulla..."
-                               WidthRequest="165"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Start" />
-                        <Label Text="3 days ago"
-                                FontFamily="Nunito"
-                                FontSize="10"
-                                TextColor="#C0C0C0"
-                                HorizontalOptions="Start" />
-                        <Label Text="Amet minim mollit non deserunt ullamco est sit"
-                                FontFamily="Nunito"
-                                FontSize="10"
-                                TextColor="#313131"
-                                WidthRequest="152"
-                                HorizontalOptions="Start"/>
-                    </VerticalStackLayout>
-                </HorizontalStackLayout>
-            </Border>
-            <Border Stroke="#F2F2F2"
-                    StrokeThickness="2"
-                    StrokeShape="RoundRectangle 24"
-                    WidthRequest="319"
-                    HeightRequest="120"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center">
-                <HorizontalStackLayout Spacing="12" Padding="1" VerticalOptions="Center" HorizontalOptions="Center"
-                    HeightRequest="120">
-                    <Frame CornerRadius="24"
-                            BorderColor="Gray"
-                            Padding="0" VerticalOptions="Center"
-                            HorizontalOptions="Center"
-                            WidthRequest="100"
-                            HeightRequest="100" >
-                        <Image Source="ngaji.png" WidthRequest="100"
-                            HeightRequest="100" Aspect="AspectFill"  />
-                    </Frame>
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center"
-                        HorizontalOptions="Start">
-                        <Label Text="Amet minim mollit non deserunt ulla..."
-                               WidthRequest="165"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Start" />
-                        <Label Text="3 days ago"
-                                FontFamily="Nunito"
-                                FontSize="10"
-                                TextColor="#C0C0C0"
-                                HorizontalOptions="Start" />
-                        <Label Text="Amet minim mollit non deserunt ullamco est sit"
-                                FontFamily="Nunito"
-                                FontSize="10"
-                                TextColor="#313131"
-                                WidthRequest="152"
-                                HorizontalOptions="Start"/>
-                    </VerticalStackLayout>
-                </HorizontalStackLayout>
-            </Border>
+            
+            <VerticalStackLayout Spacing="12" Margin="0,24,0,12">
+                <Frame Padding="10" CornerRadius="24">
+                    <HorizontalStackLayout Spacing="20">
+                        <ImageButton Source="ngaji.png" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" CornerRadius="24" />
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Amet minim mollit non deserunt ulla..." FontFamily="NunitoBold" FontSize="16" WidthRequest="165" />
+                            <Label Text="3 days ago" FontSize="10" FontFamily="NunitoBold" TextColor="{DynamicResource Secondary}" />
+                            <Label Text="Amet minim mollit non deserunt ullamco est sit" FontFamily="Nunito" FontSize="14" HorizontalOptions="Start" WidthRequest="152" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+                <Frame Padding="10" CornerRadius="24">
+                    <HorizontalStackLayout Spacing="20">
+                        <ImageButton Source="ngaji.png" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" CornerRadius="24" />
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Amet minim mollit non deserunt ulla..." FontFamily="NunitoBold" FontSize="16" WidthRequest="165" />
+                            <Label Text="3 days ago" FontSize="10" FontFamily="NunitoBold" TextColor="{DynamicResource Secondary}" />
+                            <Label Text="Amet minim mollit non deserunt ullamco est sit" FontFamily="Nunito" FontSize="14" HorizontalOptions="Start" WidthRequest="152" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+                <Frame Padding="10" CornerRadius="24">
+                    <HorizontalStackLayout Spacing="20">
+                        <ImageButton Source="ngaji.png" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" CornerRadius="24" />
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Amet minim mollit non deserunt ulla..." FontFamily="NunitoBold" FontSize="16" WidthRequest="165" />
+                            <Label Text="3 days ago" FontSize="10" FontFamily="NunitoBold" TextColor="{DynamicResource Secondary}" />
+                            <Label Text="Amet minim mollit non deserunt ullamco est sit" FontFamily="Nunito" FontSize="14" HorizontalOptions="Start" WidthRequest="152" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+            
             <Border  Stroke="{StaticResource Primary}"
                     StrokeThickness="2"
                     StrokeShape="RoundRectangle 32"
